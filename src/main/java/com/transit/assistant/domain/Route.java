@@ -14,4 +14,36 @@ public class Route {
     private String agencyId;
 
     // getters & setters
+
+    public Long getRouteId() {
+        return routeId;
+    }
+
+    public void setRouteId(Long routeId) {
+        this.routeId = routeId;
+    }
+
+    public String getRouteShortName() {
+        return routeShortName;
+    }
+
+    public void setRouteShortName(String routeShortName) {
+        this.routeShortName = routeShortName;
+    }
+
+    public String getRouteLongName() {
+        return routeLongName;
+    }
+
+    public void setRouteLongName(String routeLongName) {
+        this.routeLongName = routeLongName;
+    }
+
+    public String getAgencyId() {
+        return agencyId;
+    }
+
+    public void setAgencyId(String agencyId) {
+        this.agencyId = agencyId;
+    }
 }

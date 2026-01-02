@@ -1,13 +1,20 @@
 package com.transit.assistant.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Trip {
 
+    @Id
     private Long tripId;
     private Long routeId;
     private String serviceId;
-
-    // human-facing fields (VERY IMPORTANT later)
+    private int directionId;
+    private String patternId;
     private String tripHeadsign;
+    private String tripShortName;
+    private String depot;
     private String busClass;
 
     public Long getTripId() {
@@ -40,6 +47,38 @@ public class Trip {
 
     public void setTripHeadsign(String tripHeadsign) {
         this.tripHeadsign = tripHeadsign;
+    }
+
+    public int getDirectionId() {
+        return directionId;
+    }
+
+    public void setDirectionId(int directionId) {
+        this.directionId = directionId;
+    }
+
+    public String getPatternId() {
+        return patternId;
+    }
+
+    public void setPatternId(String patternId) {
+        this.patternId = patternId;
+    }
+
+    public String getTripShortName() {
+        return tripShortName;
+    }
+
+    public void setTripShortName(String tripShortName) {
+        this.tripShortName = tripShortName;
+    }
+
+    public String getDepot() {
+        return depot;
+    }
+
+    public void setDepot(String depot) {
+        this.depot = depot;
     }
 
     public String getBusClass() {
